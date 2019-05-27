@@ -1,0 +1,28 @@
+﻿<Window x:Class="BlogWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlogWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu HorizontalAlignment="Left" Height="50" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="794">
+            <MenuItem Header="Espace Client" Height="50">
+                <MenuItem Name="connection" Header="Se connecter" Height="50" Click="Connection_Click"></MenuItem>
+                <MenuItem Name="inscription" Header="S'inscrire" Height="50" Click="Inscription_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Name="ajouter" Header="Ajouter article" Click="ajout_article" IsEnabled="False" ></MenuItem>
+            <MenuItem Name="supprimer" Header="Supprimer article" IsEnabled="False" Click="Supprimer_Click"></MenuItem>
+            <MenuItem Name="Modifier" Header="Editer article" IsEnabled="False" Click="Modifier_Click"></MenuItem>
+        </Menu>
+        <ListView x:Name="Aricles" HorizontalAlignment="Left" Height="303" Margin="29,83,0,0" VerticalAlignment="Top" Width="237" MouseDoubleClick="Aricles_MouseDoubleClick">
+        </ListView>
+        <Grid x:Name="content" HorizontalAlignment="Left" Height="303" Margin="328,83,0,0" VerticalAlignment="Top" Width="416">
+            <TextBlock Name="contenuart" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="396" Height="283"/>
+
+        </Grid>
+        <TextBlock Name="affichage_user" HorizontalAlignment="Left" Margin="587,0,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Height="43" Width="157" RenderTransformOrigin="0.585,-0.132"/>
+
+    </Grid>
+</Window>
